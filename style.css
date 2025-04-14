@@ -1,10 +1,17 @@
+/* Asas */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
   color: #333;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
 .navbar {
   background-color: #004080;
   padding: 10px 20px;
@@ -19,6 +26,7 @@ body {
   font-weight: bold;
 }
 
+/* Hero Section */
 .hero {
   background-color: #e6f0ff;
   text-align: center;
@@ -34,6 +42,7 @@ body {
   font-size: 18px;
 }
 
+/* Nota Section */
 .nota-section {
   padding: 40px 20px;
   background-color: #f9f9f9;
@@ -52,37 +61,41 @@ body {
   gap: 30px;
 }
 
-.nota-gallery a {
-  text-decoration: none;
-  color: inherit;
+.nota-card {
   border: 2px solid #ddd;
   border-radius: 10px;
-  padding: 10px;
-  width: 250px;
+  padding: 15px;
+  width: 280px;
   background-color: #fff;
   transition: transform 0.3s;
   text-align: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
 }
 
-.nota-gallery a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.nota-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
 }
 
-.nota-gallery img {
+.nota-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-.nota-gallery video {
+.nota-card h1 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.nota-card video {
   width: 100%;
   height: auto;
   margin-top: 10px;
   border-radius: 8px;
 }
 
-/* Seksyen video tutorial */
+/* Video Tutorial Section */
 .video-section {
   text-align: center;
   padding: 60px 20px;
@@ -90,13 +103,13 @@ body {
 }
 
 .video-section h2 {
-  font-size: 30px;
+  font-size: 28px;
   margin-bottom: 25px;
   color: #003366;
 }
 
 .video-container video {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   border: 4px solid #ccc;
   border-radius: 12px;
@@ -110,4 +123,24 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nota-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .video-section h2 {
+    font-size: 24px;
+  }
 }
